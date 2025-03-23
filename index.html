@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library & Working Space</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Update the font family to match the image */
+            margin: 0; /* Remove default margin */
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .navbar-brand i {
+            transition: opacity 0.3s ease;
+        }
+        .navbar-brand span {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .navbar-brand:hover i {
+            opacity: 0;
+        }
+        .navbar-brand:hover span {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            color: white; /* Default color for nav links */
+        }
+        .nav-link:hover {
+            color: #00C389; /* Green color similar to the image */
+        }
+        .home-section {
+            padding: 60px 0;
+            text-align: center;
+            background: url('./images/homeimage1.avif') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        .home-section h1 {
+            font-size: 5rem; /* Increase font size */
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;/* Set font to Times New Roman */
+            opacity: 0;
+            animation: fade-in 2s forwards; /* Apply fade-in animation */
+        }
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+        .amenities-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .amenities-table td {
+            padding: 10px;
+            text-align: center;
+        }
+        .amenities-table i {
+            font-size: 2rem;
+            color: #00C389;
+        }
+        .aboutus {
+            position: relative;
+            background: url('./images/aboutus_image_bg.avif') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed; /* Make the background image fixed */
+            color: white;
+            padding: 60px 0;
+            margin-top: 0; /* Remove top margin */
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        .aboutus::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent grey overlay */
+            z-index: 1;
+        }
+        .aboutus .card {
+            position: relative;
+            z-index: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .aboutus h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 3rem;
+            color: black;
+        }
+        .my-5 h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 3rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .carousel-inner img {
+            height: 300px; /* Set the height of the carousel images */
+            object-fit: cover; /* Ensure the images cover the area */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-book"></i>
+                <span>Library & Working Space</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">MEMBERSHIP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid home-section" id="home">
+        <h1>CO-SPACE</h1>
+        <p>Welcome to Our Library & Working Space</p>
+    </div>
+    <!-- About Section -->
+    <div id="about" class="container-fluid aboutus">
+        <div class="container">
+            <div class="card mx-auto" style="max-width: 800px;">
+                <h2 class="text-center">ABOUT US</h2>
+                <p class="text-center">A perfect study and work environment with free WiFi, AC, drinking water, and CCTV security.</p>
+                <table class="amenities-table">
+                    <tr>
+                        <td><i class="fas fa-wifi"></i><br>Free WiFi</td>
+                        <td><i class="fas fa-snowflake"></i><br>Air Conditioning</td>
+                        <td><i class="fas fa-tint"></i><br>Drinking Water</td>
+                        <td><i class="fas fa-video"></i><br>CCTV Security</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery-->
+    <div id="gallery" class="container my-5">
+        <h2 class="text-center">GALLERY</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner slider">
+                <div class="carousel-item active">
+                    <img src="./images/library1.png" class="d-block w-100" alt="Gallery Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/library2.png" class="d-block w-100" alt="Gallery Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/library3.png" class="d-block w-100" alt="Gallery Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/library4.png" class="d-block w-100" alt="Gallery Image 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Subscription Plans -->
+    <div id="plans" class="container my-5">
+        <h2 class="text-center">MEMBERSHIP</h2>
+        <p class="text-center">Become a member!</p>
+        <div class="row text-center">
+            <div class="col-md-4 feature-box">
+                <h3>Basic</h3>
+                <p>$10/month</p>
+            </div>
+            <div class="col-md-4 feature-box">
+                <h3>Standard</h3>
+                <p>$20/month</p>
+            </div>
+            <div class="col-md-4 feature-box">
+                <h3>Premium</h3>
+                <p>$30/month</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <div id="contact" class="container my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Private Library. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
