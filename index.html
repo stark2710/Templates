@@ -74,6 +74,11 @@
                 opacity: 1;
             }
         }
+        @media (max-width: 768px) {
+            .home-section h1 {
+                font-size: 3rem; /* Adjust font size for smaller screens */
+            }
+        }
         .amenities-table {
             width: 100%;
             margin-top: 20px;
@@ -229,14 +234,20 @@
             <div class="card mx-auto" style="max-width: 800px;">
                 <h2 class="text-center">ABOUT US</h2>
                 <p class="text-center">A perfect study and work environment with free WiFi, AC, drinking water, and CCTV security.</p>
-                <table class="amenities-table">
-                    <tr>
-                        <td><i class="fas fa-wifi"></i><br>Free WiFi</td>
-                        <td><i class="fas fa-snowflake"></i><br>Air Conditioning</td>
-                        <td><i class="fas fa-tint"></i><br>Drinking Water</td>
-                        <td><i class="fas fa-video"></i><br>CCTV Security</td>
-                    </tr>
-                </table>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-wifi"></i><br>Free WiFi
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-snowflake"></i><br>Air Conditioning
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-tint"></i><br>Drinking Water
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-video"></i><br>CCTV Security
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -303,25 +314,29 @@
             <div class="content">
                 <h2 class="text-center">CONTACT US</h2>
                 <p class="text-center">We are just a call or message away!</p>
-                <table class="amenities-table">
-                    <tr>
-                        <td><i class="fas fa-envelope"></i><br>Email Us</td>
-                        <td><i class="fas fa-phone"></i><br>Call Us</td>
-                        <td><i class="fas fa-map-marker-alt"></i><br>Visit Us</td>
-                    </tr>
-                </table>
+                <div class="row text-center">
+                    <div class="col-6 col-md-4">
+                        <i class="fas fa-envelope"></i><br>Email Us
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <i class="fas fa-phone"></i><br>Call Us
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <i class="fas fa-map-marker-alt"></i><br>Visit Us
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
-   <!-- Footer -->
-   <div class="footer">
-    <p>&copy; 2025 Vivekanand Library. All Rights Reserved.</p>
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Vivekanand Library. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
-</div>
 </body>
 </html>
